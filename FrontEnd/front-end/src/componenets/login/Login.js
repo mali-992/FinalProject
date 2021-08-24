@@ -1,5 +1,8 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 export default function Login(props) {
+    const login=(values)=>{
+
+    }
     return (<>
         <div className="container">
             <div className="row justify-content-lg-center">
@@ -42,10 +45,10 @@ export default function Login(props) {
                             </button>
                         </Form>
                     </Formik>
-                    <ErrorAlert
-                        isFail={authFaild}
+                    {/* <ErrorAlert
+                       // isFail={authFaild}
                         content={"Incorrect username or password"}
-                    />
+                    /> */}
                     {/* <Link to="/signup">sign up</Link> */}
                 </div>
             </div>
