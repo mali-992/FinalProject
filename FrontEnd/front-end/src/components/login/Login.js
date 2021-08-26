@@ -1,4 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import {Link } from "react-router-dom";
 export default function Login(props) {
     const login=(values)=>{
 
@@ -7,7 +8,7 @@ export default function Login(props) {
         <div className="container">
             <div className="row justify-content-lg-center">
                 <div className="col col-lg-6">
-                    <h1>Log In</h1>
+                    <h1>Login</h1>
                     <Formik
                         initialValues={{ userName: "", password: "" }}
                         onSubmit={login}
@@ -16,9 +17,9 @@ export default function Login(props) {
                         <Form>
                             <div className="form-group">
                                 <Field
-                                    type="text"
-                                    name="userName"
-                                    placeholder="user name"
+                                    type="email"
+                                    name="email"
+                                    placeholder="email"
                                     className="form-control"
                                 />
                                 <ErrorMessage
@@ -49,7 +50,7 @@ export default function Login(props) {
                        // isFail={authFaild}
                         content={"Incorrect username or password"}
                     /> */}
-                    {/* <Link to="/signup">sign up</Link> */}
+                    <Link to="/signup">sign up</Link>
                 </div>
             </div>
         </div>
